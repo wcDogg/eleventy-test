@@ -7,5 +7,5 @@ pagination:
   size: 2
   alias: entries
   reverse: true
-permalink: /blog/
+  permalink: "/blog{%- if pagination.pageNumber > 0 -%}/{{- pagination.pageNumber -}}{%- endif -%}/"
 ---
