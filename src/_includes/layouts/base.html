@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+  <head>
+    {% include "partials/base-head.html" %}
+  </head>
+
+  <body>
+
+    <header>
+      {% include "partials/base-nav.html" %}
+    </header>
+
+    <main>
+    {{ content | safe }}
+    </main>
+
+    <footer></footer>
+
+  </body>
+</html>

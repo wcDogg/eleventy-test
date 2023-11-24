@@ -1,0 +1,9 @@
+# .gitignore
+# Eleventy also ignores directories and files listed here.
+# https://www.11ty.dev/docs/watch-serve/#ignore-watching-files
+
+.DS_Store
+/node_modules/
+/public/
+/_drafts/
+/svg/
