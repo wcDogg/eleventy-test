@@ -7,5 +7,11 @@ pagination:
   size: 2
   alias: entries
   reverse: true
-  permalink: "{%- if pagination.pageNumber == 0 -%}/blog/{%- else -%}/blog/{{- pagination.pageNumber -}}/{%- endif -%}"
+permalink: "/blog{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/index.html"
 ---
+
+<ul>
+  <li><a href="./test-links/">Test Internal Links</a></li>
+  <li><a href="./post-b/">Post B</a></li>
+  <li><a href="./post-c/">Post C</a></li>
+</ul>

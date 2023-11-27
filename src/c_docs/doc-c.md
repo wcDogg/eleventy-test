@@ -1,4 +1,4 @@
 ---
-title: "Test B"
+title: "Doc C"
 description: "A test page."
 ---

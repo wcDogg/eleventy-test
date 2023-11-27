@@ -3,6 +3,7 @@
 // Construct plugins + shortcodes
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
+const pluginInLink = require('./src/_components/inlink.js');
 
 // All Eleventy configs go here.
 module.exports = function (eleventyConfig) {
@@ -12,6 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);  
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(directoryOutputPlugin);
+  eleventyConfig.addPlugin(pluginInLink); 
 
   //
   // Collections

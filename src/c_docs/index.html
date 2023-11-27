@@ -7,5 +7,11 @@ pagination:
   size: 2
   alias: entries
   reverse: true
-  permalink: "/docs{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/index.html"
+permalink: "/docs{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/index.html"
 ---
+
+<ul>
+  <li><a href="./doc-a/">Doc A</a></li>
+  <li><a href="./doc-b/">Doc B</a></li>
+  <li><a href="./doc-c/">Doc C</a></li>
+</ul>
