@@ -3,7 +3,7 @@
 // Construct plugins + shortcodes
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
-const pluginInLink = require('./src/_components/inlink.js');
+const pluginInLink = require('./src/_components/link.js');
 
 // All Eleventy configs go here.
 module.exports = function (eleventyConfig) {
@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);  
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(directoryOutputPlugin);
-  eleventyConfig.addPlugin(pluginInLink); 
+  eleventyConfig.addPlugin(pluginInLink); // link display, href, x, aClass
 
   //
   // Collections
@@ -26,7 +26,25 @@ module.exports = function (eleventyConfig) {
   });
 
   //
-  // Last but not least :)
+  // Passthrough copy, same directory structure.
+  // Unlike watch, this can take many forms.
+  eleventyConfig.addPassthroughCopy({
+    "./src/css/": "/css/",
+    "./src/images/": "/images/",
+    "./src/js/": "/js/",
+    "./src/video/": "/video/",
+    "./src/favicons": "/"
+	});
+
+  //
+  // Watch. Arg is a single string.
+  // Cannot pass list or dict - TypeError.
+  eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("./src/images/");
+  eleventyConfig.addWatchTarget("./src/js/");
+
+  //
+  // Give me something :)
   return {
     // In and out directories
     dir: {
@@ -35,7 +53,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       output: "public"
     },
-    // Template engines. Default is Liquid.
+    // Template engines override. Default = Liquid.
     templateFormats: ["md", "html", "njk"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
