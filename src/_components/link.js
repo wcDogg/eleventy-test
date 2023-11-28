@@ -4,7 +4,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addAsyncShortcode(
     "link", 
-    async function exLink(display, href, x, aClass) {
+    async function plugLink(display, href, x, aClass) {
 
       let cls = aClass || theme.link.class;
       let rel = (x ? "external" : "internal");
