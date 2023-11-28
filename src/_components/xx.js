@@ -20,17 +20,13 @@ module.exports = eleventyConfig => {
       // href is the relationship between content in `src`
       // So this works, but isn't what we ultimately need.
       let sourceHref = sourceHrefRel(this.page.inputPath, href);
-      let baseRel = path.relative(this.page.inputPath, sourceHref);
-      let rel = path.join(baseRel, "/")
+      let sourceRel = path.relative(this.page.inputPath, sourceHref);
       
       console.log("======================================");
       console.log(path.resolve(this.page.inputPath));
       console.log(sourceHref);
-      console.log(baseRel);
-      console.log(rel)
+      console.log(sourceRel);
       console.log("======================================")
-
-      return `<a href="${rel}" title="${display}" rel="internal">${display}</a>`
 
   });
 }

@@ -18,11 +18,11 @@ module.exports = function (eleventyConfig) {
   //
   // Collections
   eleventyConfig.addCollection("blog", function (collectionAPI) {
-    return collectionAPI.getFilteredByGlob("./src/c_blog/**/*.{html,md}");
+    return collectionAPI.getFilteredByGlob("./src/content/blog/**/*.{html,md}");
   });
 
   eleventyConfig.addCollection("docs", function (collectionAPI) {
-    return collectionAPI.getFilteredByGlob("./src/c_docs/**/*.{html,md}");
+    return collectionAPI.getFilteredByGlob("./src/content/docs/**/*.{html,md}");
   });
 
   //
