@@ -1,5 +1,9 @@
 # Eleventy Test
 
+## open-props-scss
+
+https://github.com/mayank99/open-props-scss/issues/12
+
 ## Permalink issue with collection.js but not collection.json
 
 Repo: https://github.com/wcDogg/eleventy-test

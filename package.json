@@ -18,9 +18,13 @@
   },
   "scripts": {
     "server": "eleventy --serve",
-    "flush": "del-cli public/** '!public/'",
-    "html" : "eleventy",
-    "build": "npm-run-all flush html"
+    "html-flush": "del-cli public/** '!public/'",
+    "html-compile": "eleventy",
+    "html" : "npm-run-all html-*",
+    "sass-flush": "del-cli src/css/** '!src/css/'",
+    "sass-styles": "sass --source-map --embed-sources --no-error-css src/scss/styles.scss:src/css/styles.css ",
+    "sass": "npm-run-all sass-*",
+    "build": "npm-run-all sass html"
   },
 
   "devDependencies": {
@@ -28,9 +32,9 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"luxon": "^3.3.0",
-		"markdown-it-anchor": "^8.6.7",
     "npm-run-all2": "^6.1.1",
     "del-cli": "^5.1.0",
-    "common-tags": "^1.8.2"
+    "sass": "^1.69.5",
+    "open-props-scss": "^0.7.0"
   }
 }
