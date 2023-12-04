@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/dev.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA","file":"dev.css","sourcesContent":[".test-dev {\n  color: var(--blue-6);\n  background-color: var(--blue-0);\n  border: 1px solid var(--blue-1);\n  text-shadow: 0 1px 0 var(--blue-2);\n}\n"]}

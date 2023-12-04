@@ -22,7 +22,10 @@
     "html-compile": "eleventy",
     "html" : "npm-run-all html-*",
     "sass-flush": "del-cli src/css/** '!src/css/'",
-    "sass-styles": "sass --source-map --embed-sources --no-error-css src/scss/styles.scss:src/css/styles.css ",
+    "sass-styles": "sass --source-map --embed-sources --no-error-css src/scss/styles.scss:src/css/styles.css",
+    "sass-dev": "sass --source-map --embed-sources --no-error-css src/scss/dev.scss:src/css/dev.css",
+    "sass-post-styles": "postcss src/css/styles.css -o src/css/styles.min.css",
+    "sass-post-dev": "postcss src/css/dev.css -o src/css/dev.min.css",
     "sass": "npm-run-all sass-*",
     "build": "npm-run-all sass html"
   },
@@ -35,6 +38,15 @@
     "npm-run-all2": "^6.1.1",
     "del-cli": "^5.1.0",
     "sass": "^1.69.5",
-    "open-props-scss": "^0.7.0"
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-jit-props": "^1.0.14",
+    "postcss-minify": "^1.1.0",
+    "autoprefixer": "^10.4.14",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "open-props-scss": "^0.7.0",
+    "open-props": "^1.6.13"
   }
 }

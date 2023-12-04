@@ -2,4 +2,25 @@
   background-color: yellow;
 }
 
+.test-op {
+  color: var(--blue-6);
+  background-color: var(--blue-0);
+  border: 1px solid var(--blue-1);
+  text-shadow: 0 1px 0 var(--blue-2);
+}
+
+::placeholder {
+  color: gray;
+}
+
+.image {
+  background-image: url(image@1x.png);
+}
+
+@media (min-resolution: 2dppx) {
+  .image {
+    background-image: url(image@2x.png);
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

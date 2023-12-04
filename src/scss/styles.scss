@@ -1,5 +1,31 @@
-// Open Props
+// Open Props SCSS
 // @use 'open-props-scss' as op;
+
+// Open Props JIT
+// @import "open-props/postcss/style";
 
 // Custom Styles
 @import "custom/index";
+
+.test-op {
+  color: var(--blue-6);
+  background-color: var(--blue-0);
+  border: 1px solid var(--blue-1);
+  text-shadow: 0 1px 0 var(--blue-2);
+}
+
+// Test Autoprefixer
+// https://github.com/postcss/autoprefixer#readme
+::placeholder {
+  color: gray;
+}
+
+.image {
+  background-image: url(image@1x.png);
+}
+@media (min-resolution: 2dppx) {
+  .image {
+    background-image: url(image@2x.png);
+  }
+}
+

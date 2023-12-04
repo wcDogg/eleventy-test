@@ -1,0 +1,5 @@
+:root{--blue-6:#228be6;--blue-0:#e7f5ff;--blue-1:#d0ebff;--blue-2:#a5d8ff}
+
+.test-dev{color:var(--blue-6);background-color:var(--blue-0);border:1px solid var(--blue-1);text-shadow:0 1px 0 var(--blue-2)}
+
+/*# sourceMappingURL=dev.min.css.map */
